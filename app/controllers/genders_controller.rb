@@ -5,7 +5,9 @@ class GendersController < ApplicationController
   # GET /genders.json
   def index
     @genders = Gender.all
+
   end
+  
 
   # GET /genders/1
   # GET /genders/1.json
