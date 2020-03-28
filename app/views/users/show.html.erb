@@ -38,7 +38,9 @@
 
 <p>
   <strong>Gender:</strong>
-  <%= @user.gender_id %>
+  <% gender_name = Gender.find(@user.gender_id).name%>
+
+  <%= gender_name %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

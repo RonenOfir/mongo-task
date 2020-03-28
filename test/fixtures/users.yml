@@ -7,6 +7,7 @@ one:
   company: MyString
   phone: MyString
   address: MyString
+  gender_id: MyString
   age: 1
 
 two:
@@ -16,4 +17,5 @@ two:
   company: MyString
   phone: MyString
   address: MyString
+  gender_id: MyString
   age: 1
