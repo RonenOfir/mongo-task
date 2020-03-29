@@ -51,7 +51,7 @@
 
     <% genders_array = Gender.all.map{ |g| [g.name, g.id]} %>
 
-    <%= form.select 'gender_id', options_for_select(genders_array) %>
+    <%= form.select 'gender_id', options_for_select(genders_array, @user.gender_id) %>
 
    
    </div>

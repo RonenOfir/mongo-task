@@ -12,6 +12,6 @@ class User
   has_one :gender  
   
   validates_uniqueness_of :mail, :phone
-  validates_presence_of :first_name, :last_name, :mail, :phone
+  validates_presence_of :first_name, :last_name, :mail, :phone, :gender_id
 
 end
