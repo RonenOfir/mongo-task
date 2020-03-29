@@ -1,9 +1,12 @@
-<p id="notice"><%= notice %></p>
+<div class="wrapper">
 
-<p>
-  <strong>Name:</strong>
-  <%= @gender.name %>
-</p>
+	<p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_gender_path(@gender) %> |
-<%= link_to 'Back', genders_path %>
+	<p>
+	  <strong>Name:</strong>
+	  <%= @gender.name %>
+	</p>
+
+	<%= link_to 'Edit', edit_gender_path(@gender) %> |
+	<%= link_to 'Back', genders_path %>
+</div>

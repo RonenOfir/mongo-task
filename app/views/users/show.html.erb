@@ -1,47 +1,50 @@
-<p id="notice"><%= notice %></p>
+<div class="wrapper">
 
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
+  <p>
+    <strong>First name:</strong>
+    <%= @user.first_name %>
+  </p>
 
-<p>
-  <strong>Mail:</strong>
-  <%= @user.mail %>
-</p>
+  <p>
+    <strong>Last name:</strong>
+    <%= @user.last_name %>
+  </p>
 
-<p>
-  <strong>Company:</strong>
-  <%= @user.company %>
-</p>
+  <p>
+    <strong>Mail:</strong>
+    <%= @user.mail %>
+  </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @user.phone %>
-</p>
+  <p>
+    <strong>Company:</strong>
+    <%= @user.company %>
+  </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @user.address %>
-</p>
+  <p>
+    <strong>Phone:</strong>
+    <%= @user.phone %>
+  </p>
 
-<p>
-  <strong>Age:</strong>
-  <%= @user.age %>
-</p>
+  <p>
+    <strong>Address:</strong>
+    <%= @user.address %>
+  </p>
+
+  <p>
+    <strong>Age:</strong>
+    <%= @user.age %>
+  </p>
 
 
-<p>
-  <strong>Gender:</strong>
-  <% gender_name = Gender.find(@user.gender_id).name%>
+  <p>
+    <strong>Gender:</strong>
+    <% gender_name = Gender.find(@user.gender_id).name%>
 
-  <%= gender_name %>
-</p>
+    <%= gender_name %>
+  </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+  <%= link_to 'Edit', edit_user_path(@user) %> |
+  <%= link_to 'Back', users_path %>
+</div>  
