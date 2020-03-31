@@ -21,7 +21,8 @@
   </thead>
 
   <tbody>
-    <% @users.each do |user| %>
+  <% @all_users = User.includes(:gender).all %>
+    <% @all_users.each do |user| %>
       <tr>
         <td><%= user.first_name %></td>
         <td><%= user.last_name %></td>
@@ -30,16 +31,8 @@
         <td><%= user.phone %></td>
         <td><%= user.address %></td>
         <td><%= user.age %></td>
-        <%  
-
-            gender_name = ''
-            unless user.gender_id.nil?
-              gender_name = Gender.find(user.gender_id).name
-            end
-
-        %>
-        <td><%= gender_name %></td>
-
+         
+        <td><%= user.gender.name %></td>
 
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
