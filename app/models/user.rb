@@ -8,8 +8,8 @@ class User
   field :address, type: String
   field :age, type: Integer
   field :gender_id, type: String
-
-  has_one :gender  
+   
+  belongs_to :gender  
   
   validates_uniqueness_of :mail, :phone
   validates_presence_of :first_name, :last_name, :mail, :phone, :gender_id

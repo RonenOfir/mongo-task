@@ -21,7 +21,8 @@
   </thead>
 
   <tbody>
-    <% @users.each do |user| %>
+    <% @all_users = User.includes(:gender).all %>
+    <% @all_users.each do |user| %>
       <tr>
         <td><%= user.first_name %></td>
         <td><%= user.last_name %></td>
@@ -38,7 +39,7 @@
             end
 
         %>
-        <td><%= gender_name %></td>
+        <td><%= user.gender.name %></td>
 
 
         <td><%= link_to 'Show', user %></td>
